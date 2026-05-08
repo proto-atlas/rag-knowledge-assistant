@@ -1,0 +1,43 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "rag-knowledge-assistant",
+  "main": "src/worker/index.ts",
+  "compatibility_date": "2026-04-30",
+  "workers_dev": true,
+  "preview_urls": false,
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist/client"
+  },
+  "ai": {
+    "binding": "AI"
+  },
+  "vectorize": [
+    {
+      "binding": "RAG_VECTOR_INDEX",
+      "index_name": "rag-bge-m3-v1"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "RAG_DB",
+      "database_name": "rag-knowledge-assistant-db",
+      // Public portfolio config: D1 database_id is not a secret; access still requires Cloudflare account and binding permissions.
+      "database_id": "7a9b54db-b72a-4bf6-bc3d-f56537ad50fa"
+    }
+  ],
+  "vars": {
+    "RAG_ACTIVE_INDEX_VERSION": "rag-bge-m3-v1",
+    "RAG_SEARCH_PROVIDER_MODE": "vectorize-d1",
+    "RAG_ANSWER_PROVIDER_MODE": "anthropic",
+    "RAG_ENABLE_ANTHROPIC_LIVE": "true",
+    "RAG_CLAUDE_MODEL": "claude-sonnet-4-6",
+    "RAG_ANTHROPIC_MAX_TOKENS": "256",
+    "RAG_MIN_PROVIDER_VECTOR_SCORE": "0.55",
+    "RAG_RATE_LIMIT_MAX_REQUESTS": "12",
+    "RAG_RATE_LIMIT_WINDOW_SECONDS": "60"
+  },
+  "observability": {
+    "enabled": true
+  }
+}
