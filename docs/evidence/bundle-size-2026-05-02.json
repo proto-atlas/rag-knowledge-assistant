@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-05-02T12:34:33.237Z",
+  "checkType": "bundle-size",
+  "scope": "local production build output",
+  "totals": {
+    "rawBytes": 225613,
+    "gzipBytes": 70676,
+    "brotliBytes": 60516
+  },
+  "assets": [
+    {
+      "path": "assets/index-CkeV0tFL.js",
+      "extension": ".js",
+      "rawBytes": 217322,
+      "gzipBytes": 68009,
+      "brotliBytes": 58403
+    },
+    {
+      "path": "assets/index-CmTgy1kT.css",
+      "extension": ".css",
+      "rawBytes": 6454,
+      "gzipBytes": 1813,
+      "brotliBytes": 1508
+    },
+    {
+      "path": "index.html",
+      "extension": ".html",
+      "rawBytes": 1837,
+      "gzipBytes": 854,
+      "brotliBytes": 605
+    }
+  ]
+}

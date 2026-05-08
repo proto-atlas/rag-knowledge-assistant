@@ -1,0 +1,2512 @@
+{
+  "generatedAt": "2026-05-03T06:04:03.647Z",
+  "checkType": "external-benchmark-subset-eval",
+  "dataset": {
+    "name": "castorini/mr-tydi japanese dev subset",
+    "language": "japanese",
+    "split": "dev",
+    "license": "Apache-2.0",
+    "sourceUrls": [
+      "https://huggingface.co/datasets/castorini/mr-tydi",
+      "https://huggingface.co/datasets/castorini/mr-tydi-corpus",
+      "https://huggingface.co/datasets/castorini/mr-tydi/resolve/main/mrtydi-v1.1-japanese/dev.jsonl.gz",
+      "https://huggingface.co/datasets/castorini/mr-tydi-corpus/resolve/main/mrtydi-v1.1-japanese/corpus.jsonl.gz"
+    ],
+    "queryLimit": 50,
+    "negativeDocumentLimit": 250,
+    "candidateDocumentCount": 300,
+    "inputHash": "e8a8193eedbe4569ca7333c0e20475462fd39818cefdeb6d47588344e4f091cf"
+  },
+  "result": {
+    "total": 50,
+    "hitAt1": 0.98,
+    "hitAt5": 0.98,
+    "hitAt10": 0.98,
+    "mrr": 0.98,
+    "failed": 1,
+    "failureCategories": {
+      "domain_mismatch": 1,
+      "normalization_gap": 0,
+      "long_query_drift": 0,
+      "synonym_gap": 0,
+      "gold_granularity_mismatch": 0,
+      "zero_score": 0
+    }
+  },
+  "rows": [
+    {
+      "id": "0",
+      "query": "“ダン” ダニエル・ジャドソン・キャラハンの出身はどこ",
+      "expectedDocIds": [
+        "2681119#1"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "2681119#1",
+          "score": 48.75
+        },
+        {
+          "docId": "57206#1",
+          "score": 3.5
+        },
+        {
+          "docId": "2548803#3",
+          "score": 2
+        },
+        {
+          "docId": "338994#0",
+          "score": 2
+        },
+        {
+          "docId": "329100#0",
+          "score": 1.5
+        },
+        {
+          "docId": "10#11",
+          "score": 1
+        },
+        {
+          "docId": "10#36",
+          "score": 1
+        },
+        {
+          "docId": "11#73",
+          "score": 1
+        },
+        {
+          "docId": "10#12",
+          "score": 0.5
+        },
+        {
+          "docId": "10#13",
+          "score": 0.5
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "3",
+      "query": "日本テレビ系列『ZIP!』の初代の司会は誰ですか？",
+      "expectedDocIds": [
+        "3864531#4"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "3864531#4",
+          "score": 14.5
+        },
+        {
+          "docId": "67334#5",
+          "score": 5.5
+        },
+        {
+          "docId": "11#17",
+          "score": 4.25
+        },
+        {
+          "docId": "11#109",
+          "score": 2.5
+        },
+        {
+          "docId": "11#152",
+          "score": 2.5
+        },
+        {
+          "docId": "11#158",
+          "score": 2.5
+        },
+        {
+          "docId": "11#176",
+          "score": 2.5
+        },
+        {
+          "docId": "11#192",
+          "score": 2.5
+        },
+        {
+          "docId": "11#22",
+          "score": 2.5
+        },
+        {
+          "docId": "11#30",
+          "score": 2.5
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "4",
+      "query": "森上亜希子の出身はどこ",
+      "expectedDocIds": [
+        "329100#0"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "329100#0",
+          "score": 18.25
+        },
+        {
+          "docId": "11#73",
+          "score": 1
+        },
+        {
+          "docId": "10#11",
+          "score": 0.5
+        },
+        {
+          "docId": "10#26",
+          "score": 0.5
+        },
+        {
+          "docId": "11#137",
+          "score": 0.5
+        },
+        {
+          "docId": "11#17",
+          "score": 0.5
+        },
+        {
+          "docId": "11#180",
+          "score": 0.5
+        },
+        {
+          "docId": "11#90",
+          "score": 0.5
+        },
+        {
+          "docId": "11#94",
+          "score": 0.5
+        },
+        {
+          "docId": "1862185#0",
+          "score": 0.5
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "5",
+      "query": "相模原線が開通したのはいつ",
+      "expectedDocIds": [
+        "11152#9"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "11152#9",
+          "score": 15
+        },
+        {
+          "docId": "1249364#3",
+          "score": 4
+        },
+        {
+          "docId": "1862185#0",
+          "score": 2.25
+        },
+        {
+          "docId": "22530#1",
+          "score": 2.25
+        },
+        {
+          "docId": "67334#5",
+          "score": 2.25
+        },
+        {
+          "docId": "10#15",
+          "score": 1
+        },
+        {
+          "docId": "10#27",
+          "score": 1
+        },
+        {
+          "docId": "10#36",
+          "score": 1
+        },
+        {
+          "docId": "11#10",
+          "score": 1
+        },
+        {
+          "docId": "11#125",
+          "score": 1
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "7",
+      "query": "ジョージ・ローレンス・マイカンはいつ生まれた？",
+      "expectedDocIds": [
+        "266524#0"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "266524#0",
+          "score": 41.25
+        },
+        {
+          "docId": "85202#5",
+          "score": 7.5
+        },
+        {
+          "docId": "10#15",
+          "score": 5
+        },
+        {
+          "docId": "1249364#3",
+          "score": 5
+        },
+        {
+          "docId": "11#162",
+          "score": 4.5
+        },
+        {
+          "docId": "2584807#4",
+          "score": 4.25
+        },
+        {
+          "docId": "2681119#1",
+          "score": 4.25
+        },
+        {
+          "docId": "3041653#3",
+          "score": 3.75
+        },
+        {
+          "docId": "48637#4",
+          "score": 3.25
+        },
+        {
+          "docId": "11#167",
+          "score": 2.75
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "10",
+      "query": "知的財産権が日本で認められたのはいつ？",
+      "expectedDocIds": [
+        "8489#8"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "8489#8",
+          "score": 19
+        },
+        {
+          "docId": "11#17",
+          "score": 7.75
+        },
+        {
+          "docId": "11#25",
+          "score": 7.75
+        },
+        {
+          "docId": "11#122",
+          "score": 6
+        },
+        {
+          "docId": "11#154",
+          "score": 5.5
+        },
+        {
+          "docId": "1249364#3",
+          "score": 4.5
+        },
+        {
+          "docId": "2022546#3",
+          "score": 4.5
+        },
+        {
+          "docId": "11#13",
+          "score": 4.25
+        },
+        {
+          "docId": "11#180",
+          "score": 4.25
+        },
+        {
+          "docId": "11#92",
+          "score": 4.25
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "12",
+      "query": "日本ボクシングコミッションが設立したのはいつ",
+      "expectedDocIds": [
+        "421671#0"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "421671#0",
+          "score": 71.25
+        },
+        {
+          "docId": "54592#4",
+          "score": 6.25
+        },
+        {
+          "docId": "10#36",
+          "score": 5.5
+        },
+        {
+          "docId": "67334#5",
+          "score": 5.25
+        },
+        {
+          "docId": "10#11",
+          "score": 4.5
+        },
+        {
+          "docId": "3041653#3",
+          "score": 4.5
+        },
+        {
+          "docId": "11#171",
+          "score": 4.25
+        },
+        {
+          "docId": "11#20",
+          "score": 4.25
+        },
+        {
+          "docId": "11#21",
+          "score": 4.25
+        },
+        {
+          "docId": "1249364#3",
+          "score": 4
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "14",
+      "query": "水蒸気自動車が初めて開発されたのはいつ",
+      "expectedDocIds": [
+        "22530#1"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "22530#1",
+          "score": 28.25
+        },
+        {
+          "docId": "54592#4",
+          "score": 8.5
+        },
+        {
+          "docId": "320509#13",
+          "score": 8
+        },
+        {
+          "docId": "1249364#3",
+          "score": 6.75
+        },
+        {
+          "docId": "186104#27",
+          "score": 4.5
+        },
+        {
+          "docId": "1862185#0",
+          "score": 4.5
+        },
+        {
+          "docId": "10#15",
+          "score": 3.25
+        },
+        {
+          "docId": "10#36",
+          "score": 2.75
+        },
+        {
+          "docId": "11152#9",
+          "score": 2.75
+        },
+        {
+          "docId": "304598#0",
+          "score": 2.75
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "16",
+      "query": "ジャコモ・マイアベーアはいつ生まれた？",
+      "expectedDocIds": [
+        "338994#0"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "338994#0",
+          "score": 45.75
+        },
+        {
+          "docId": "10#15",
+          "score": 4.5
+        },
+        {
+          "docId": "11#162",
+          "score": 4.5
+        },
+        {
+          "docId": "1249364#3",
+          "score": 4
+        },
+        {
+          "docId": "2681119#1",
+          "score": 3.25
+        },
+        {
+          "docId": "168383#12",
+          "score": 2.75
+        },
+        {
+          "docId": "1862185#0",
+          "score": 2.75
+        },
+        {
+          "docId": "3041653#3",
+          "score": 2.75
+        },
+        {
+          "docId": "232969#1",
+          "score": 2.5
+        },
+        {
+          "docId": "266524#0",
+          "score": 2.5
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "22",
+      "query": "スポーツにおけるドーピング検査が始まったのはいつ",
+      "expectedDocIds": [
+        "54592#4"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "54592#4",
+          "score": 31.5
+        },
+        {
+          "docId": "1883682#0",
+          "score": 14.5
+        },
+        {
+          "docId": "266524#0",
+          "score": 8.5
+        },
+        {
+          "docId": "1249364#3",
+          "score": 6.75
+        },
+        {
+          "docId": "10#21",
+          "score": 5
+        },
+        {
+          "docId": "10#2",
+          "score": 4.5
+        },
+        {
+          "docId": "11#89",
+          "score": 4.5
+        },
+        {
+          "docId": "10#32",
+          "score": 4
+        },
+        {
+          "docId": "10#37",
+          "score": 4
+        },
+        {
+          "docId": "10#45",
+          "score": 4
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "26",
+      "query": "パメラ・コールマン・スミスはいつ生まれた？",
+      "expectedDocIds": [
+        "3036390#0"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "3036390#0",
+          "score": 43.25
+        },
+        {
+          "docId": "1249364#3",
+          "score": 6
+        },
+        {
+          "docId": "10#15",
+          "score": 5
+        },
+        {
+          "docId": "11#162",
+          "score": 4.5
+        },
+        {
+          "docId": "168383#12",
+          "score": 4.25
+        },
+        {
+          "docId": "2681119#1",
+          "score": 4.25
+        },
+        {
+          "docId": "1862185#0",
+          "score": 3.25
+        },
+        {
+          "docId": "3041653#3",
+          "score": 3.25
+        },
+        {
+          "docId": "424923#4",
+          "score": 3
+        },
+        {
+          "docId": "11#167",
+          "score": 2.75
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "30",
+      "query": "宗教改革はいつ起きた？",
+      "expectedDocIds": [
+        "78756#10"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "78756#10",
+          "score": 14.5
+        },
+        {
+          "docId": "10#21",
+          "score": 4
+        },
+        {
+          "docId": "10#13",
+          "score": 0.5
+        },
+        {
+          "docId": "10#14",
+          "score": 0.5
+        },
+        {
+          "docId": "10#15",
+          "score": 0.5
+        },
+        {
+          "docId": "10#16",
+          "score": 0.5
+        },
+        {
+          "docId": "10#27",
+          "score": 0.5
+        },
+        {
+          "docId": "10#36",
+          "score": 0.5
+        },
+        {
+          "docId": "10#41",
+          "score": 0.5
+        },
+        {
+          "docId": "11#156",
+          "score": 0.5
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "33",
+      "query": "ニシネズミザメは肉食？",
+      "expectedDocIds": [
+        "2392975#1"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "2392975#1",
+          "score": 24
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "48",
+      "query": "世界で一番深い場所は深海何ｍ？",
+      "expectedDocIds": [
+        "309202#1"
+      ],
+      "firstMatchRank": null,
+      "topDocs": [
+        {
+          "docId": "10#33",
+          "score": 2.25
+        },
+        {
+          "docId": "11#164",
+          "score": 2.25
+        },
+        {
+          "docId": "54592#4",
+          "score": 1
+        },
+        {
+          "docId": "10#14",
+          "score": 0.5
+        },
+        {
+          "docId": "10#17",
+          "score": 0.5
+        },
+        {
+          "docId": "10#21",
+          "score": 0.5
+        },
+        {
+          "docId": "10#23",
+          "score": 0.5
+        },
+        {
+          "docId": "10#26",
+          "score": 0.5
+        },
+        {
+          "docId": "10#31",
+          "score": 0.5
+        },
+        {
+          "docId": "11#148",
+          "score": 0.5
+        }
+      ],
+      "failureCategory": "domain_mismatch"
+    },
+    {
+      "id": "49",
+      "query": "ハンガリー王国は何年続いた？",
+      "expectedDocIds": [
+        "57206#1"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "57206#1",
+          "score": 37.25
+        },
+        {
+          "docId": "2681119#1",
+          "score": 3
+        },
+        {
+          "docId": "10#30",
+          "score": 2.75
+        },
+        {
+          "docId": "2548803#3",
+          "score": 2
+        },
+        {
+          "docId": "304598#0",
+          "score": 2
+        },
+        {
+          "docId": "10#24",
+          "score": 1
+        },
+        {
+          "docId": "11152#9",
+          "score": 1
+        },
+        {
+          "docId": "1249364#3",
+          "score": 1
+        },
+        {
+          "docId": "320509#13",
+          "score": 1
+        },
+        {
+          "docId": "78756#10",
+          "score": 1
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "59",
+      "query": "イアペトゥスに水はある？",
+      "expectedDocIds": [
+        "232969#1"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "232969#1",
+          "score": 27.5
+        },
+        {
+          "docId": "10#8",
+          "score": 2.25
+        },
+        {
+          "docId": "338994#0",
+          "score": 2
+        },
+        {
+          "docId": "10#30",
+          "score": 1.5
+        },
+        {
+          "docId": "1249364#3",
+          "score": 1.5
+        },
+        {
+          "docId": "10#25",
+          "score": 1
+        },
+        {
+          "docId": "10#36",
+          "score": 1
+        },
+        {
+          "docId": "11#122",
+          "score": 1
+        },
+        {
+          "docId": "11#59",
+          "score": 1
+        },
+        {
+          "docId": "2681119#1",
+          "score": 1
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "67",
+      "query": "『メイベリー110番』の監督は誰？",
+      "expectedDocIds": [
+        "2548803#3"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "2548803#3",
+          "score": 40.5
+        },
+        {
+          "docId": "57206#1",
+          "score": 2.5
+        },
+        {
+          "docId": "168383#12",
+          "score": 2.25
+        },
+        {
+          "docId": "304598#0",
+          "score": 2
+        },
+        {
+          "docId": "11#33",
+          "score": 1
+        },
+        {
+          "docId": "2681119#1",
+          "score": 1
+        },
+        {
+          "docId": "309202#1",
+          "score": 1
+        },
+        {
+          "docId": "67334#5",
+          "score": 1
+        },
+        {
+          "docId": "78756#10",
+          "score": 1
+        },
+        {
+          "docId": "10#14",
+          "score": 0.5
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "73",
+      "query": "「アフタヌーンショー」の初代司会者は誰？",
+      "expectedDocIds": [
+        "67334#5"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "67334#5",
+          "score": 41
+        },
+        {
+          "docId": "3864531#4",
+          "score": 2.75
+        },
+        {
+          "docId": "266524#0",
+          "score": 2.5
+        },
+        {
+          "docId": "421671#0",
+          "score": 2
+        },
+        {
+          "docId": "4008#2",
+          "score": 1.5
+        },
+        {
+          "docId": "10#34",
+          "score": 1
+        },
+        {
+          "docId": "10#35",
+          "score": 1
+        },
+        {
+          "docId": "11#73",
+          "score": 1
+        },
+        {
+          "docId": "1249364#3",
+          "score": 1
+        },
+        {
+          "docId": "22530#1",
+          "score": 1
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "78",
+      "query": "新幹線のぞみはいつ運用が始まった",
+      "expectedDocIds": [
+        "3268150#1"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "3268150#1",
+          "score": 8.25
+        },
+        {
+          "docId": "11152#9",
+          "score": 4
+        },
+        {
+          "docId": "10#16",
+          "score": 2.25
+        },
+        {
+          "docId": "10#26",
+          "score": 2.25
+        },
+        {
+          "docId": "11#123",
+          "score": 2.25
+        },
+        {
+          "docId": "11#143",
+          "score": 2.25
+        },
+        {
+          "docId": "11#144",
+          "score": 2.25
+        },
+        {
+          "docId": "11#31",
+          "score": 2.25
+        },
+        {
+          "docId": "85202#5",
+          "score": 2.25
+        },
+        {
+          "docId": "11#18",
+          "score": 1.5
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "80",
+      "query": "木曽川の全長は？",
+      "expectedDocIds": [
+        "30403#3"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "30403#3",
+          "score": 8.25
+        },
+        {
+          "docId": "11#115",
+          "score": 0.5
+        },
+        {
+          "docId": "37740#4",
+          "score": 0.5
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "88",
+      "query": "ロバート・ピールの出身はどこ",
+      "expectedDocIds": [
+        "168383#12"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "168383#12",
+          "score": 19.5
+        },
+        {
+          "docId": "37740#4",
+          "score": 13.5
+        },
+        {
+          "docId": "2681119#1",
+          "score": 5.75
+        },
+        {
+          "docId": "57206#1",
+          "score": 2.75
+        },
+        {
+          "docId": "10#31",
+          "score": 2.25
+        },
+        {
+          "docId": "10#4",
+          "score": 2.25
+        },
+        {
+          "docId": "10#7",
+          "score": 2.25
+        },
+        {
+          "docId": "1862185#0",
+          "score": 2.25
+        },
+        {
+          "docId": "1883682#0",
+          "score": 2.25
+        },
+        {
+          "docId": "2584807#4",
+          "score": 2.25
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "90",
+      "query": "JPモルガン・チェースが最初に行った事業は何",
+      "expectedDocIds": [
+        "102838#15"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "102838#15",
+          "score": 34
+        },
+        {
+          "docId": "424923#4",
+          "score": 8.75
+        },
+        {
+          "docId": "3643901#0",
+          "score": 4.5
+        },
+        {
+          "docId": "77046#13",
+          "score": 4
+        },
+        {
+          "docId": "2681119#1",
+          "score": 3.25
+        },
+        {
+          "docId": "11#123",
+          "score": 2.75
+        },
+        {
+          "docId": "3564220#1",
+          "score": 2.75
+        },
+        {
+          "docId": "57206#1",
+          "score": 2.75
+        },
+        {
+          "docId": "3041653#3",
+          "score": 2.5
+        },
+        {
+          "docId": "11#54",
+          "score": 2.25
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "91",
+      "query": "The KLFのデビュー曲は何",
+      "expectedDocIds": [
+        "517739#8"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "517739#8",
+          "score": 10.5
+        },
+        {
+          "docId": "102838#15",
+          "score": 2.75
+        },
+        {
+          "docId": "1862185#0",
+          "score": 2.75
+        },
+        {
+          "docId": "5#0",
+          "score": 2.75
+        },
+        {
+          "docId": "11#104",
+          "score": 2.25
+        },
+        {
+          "docId": "11#105",
+          "score": 2.25
+        },
+        {
+          "docId": "11#162",
+          "score": 2.25
+        },
+        {
+          "docId": "11#163",
+          "score": 2.25
+        },
+        {
+          "docId": "11#92",
+          "score": 2.25
+        },
+        {
+          "docId": "1883682#0",
+          "score": 2.25
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "94",
+      "query": "マリリン・モンローと結婚していたことがある野球選手はだれですか？",
+      "expectedDocIds": [
+        "2584807#4"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "2584807#4",
+          "score": 34
+        },
+        {
+          "docId": "10#13",
+          "score": 11.5
+        },
+        {
+          "docId": "10#14",
+          "score": 9
+        },
+        {
+          "docId": "11#18",
+          "score": 9
+        },
+        {
+          "docId": "78756#10",
+          "score": 9
+        },
+        {
+          "docId": "10#30",
+          "score": 8.5
+        },
+        {
+          "docId": "11#181",
+          "score": 8.5
+        },
+        {
+          "docId": "1249364#3",
+          "score": 7.75
+        },
+        {
+          "docId": "2022546#3",
+          "score": 7.75
+        },
+        {
+          "docId": "2206433#0",
+          "score": 7.5
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "101",
+      "query": "日本で最古の民間保険会社は何？",
+      "expectedDocIds": [
+        "96129#17"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "96129#17",
+          "score": 10
+        },
+        {
+          "docId": "11#17",
+          "score": 3.75
+        },
+        {
+          "docId": "11#3",
+          "score": 3.75
+        },
+        {
+          "docId": "11#160",
+          "score": 2.5
+        },
+        {
+          "docId": "10#38",
+          "score": 2.25
+        },
+        {
+          "docId": "780830#6",
+          "score": 2.25
+        },
+        {
+          "docId": "11#0",
+          "score": 2
+        },
+        {
+          "docId": "11#1",
+          "score": 2
+        },
+        {
+          "docId": "11#105",
+          "score": 2
+        },
+        {
+          "docId": "11#107",
+          "score": 2
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "102",
+      "query": "アメリカ合衆国で禁酒法が行われていた時期はいつですか？",
+      "expectedDocIds": [
+        "1883682#0"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "1883682#0",
+          "score": 41.5
+        },
+        {
+          "docId": "85202#5",
+          "score": 28.5
+        },
+        {
+          "docId": "10#33",
+          "score": 14.25
+        },
+        {
+          "docId": "10#24",
+          "score": 9.75
+        },
+        {
+          "docId": "1862185#0",
+          "score": 9.25
+        },
+        {
+          "docId": "266524#0",
+          "score": 9.25
+        },
+        {
+          "docId": "10#14",
+          "score": 8
+        },
+        {
+          "docId": "11#19",
+          "score": 7.5
+        },
+        {
+          "docId": "10#11",
+          "score": 6.25
+        },
+        {
+          "docId": "10#39",
+          "score": 6.25
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "103",
+      "query": "ファイナルファンタジーシリーズを開発したゲーム会社は何？",
+      "expectedDocIds": [
+        "304598#0"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "304598#0",
+          "score": 84
+        },
+        {
+          "docId": "11#172",
+          "score": 4.5
+        },
+        {
+          "docId": "3864531#4",
+          "score": 4.5
+        },
+        {
+          "docId": "57206#1",
+          "score": 4
+        },
+        {
+          "docId": "2548803#3",
+          "score": 3.5
+        },
+        {
+          "docId": "10#30",
+          "score": 3.25
+        },
+        {
+          "docId": "424923#4",
+          "score": 2.75
+        },
+        {
+          "docId": "5#1",
+          "score": 2.25
+        },
+        {
+          "docId": "102838#15",
+          "score": 1.5
+        },
+        {
+          "docId": "11#33",
+          "score": 1.5
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "110",
+      "query": "カルステン・ボルクグレヴィンクは何年に生まれましたか？",
+      "expectedDocIds": [
+        "3041653#3"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "3041653#3",
+          "score": 26.25
+        },
+        {
+          "docId": "1249364#3",
+          "score": 4.5
+        },
+        {
+          "docId": "168383#12",
+          "score": 4.5
+        },
+        {
+          "docId": "10#15",
+          "score": 4
+        },
+        {
+          "docId": "2681119#1",
+          "score": 3.25
+        },
+        {
+          "docId": "78756#10",
+          "score": 3
+        },
+        {
+          "docId": "11#162",
+          "score": 2.75
+        },
+        {
+          "docId": "11#167",
+          "score": 2.75
+        },
+        {
+          "docId": "1862185#0",
+          "score": 2.75
+        },
+        {
+          "docId": "2022546#3",
+          "score": 2.75
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "115",
+      "query": "アメリカに西欧人が入植したのはいつ？",
+      "expectedDocIds": [
+        "85202#5"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "85202#5",
+          "score": 17.75
+        },
+        {
+          "docId": "1883682#0",
+          "score": 14.5
+        },
+        {
+          "docId": "10#14",
+          "score": 4.5
+        },
+        {
+          "docId": "10#24",
+          "score": 4.5
+        },
+        {
+          "docId": "10#32",
+          "score": 4.5
+        },
+        {
+          "docId": "1862185#0",
+          "score": 4.5
+        },
+        {
+          "docId": "10#23",
+          "score": 4
+        },
+        {
+          "docId": "10#33",
+          "score": 4
+        },
+        {
+          "docId": "10#7",
+          "score": 4
+        },
+        {
+          "docId": "11#144",
+          "score": 4
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "117",
+      "query": "ロバート・オウエンは政治家にはならなかった？",
+      "expectedDocIds": [
+        "37740#4"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "37740#4",
+          "score": 30.75
+        },
+        {
+          "docId": "168383#12",
+          "score": 13.5
+        },
+        {
+          "docId": "2022546#3",
+          "score": 6.75
+        },
+        {
+          "docId": "2681119#1",
+          "score": 6.75
+        },
+        {
+          "docId": "11#135",
+          "score": 5.75
+        },
+        {
+          "docId": "57206#1",
+          "score": 5.5
+        },
+        {
+          "docId": "78756#10",
+          "score": 5
+        },
+        {
+          "docId": "10#21",
+          "score": 4.5
+        },
+        {
+          "docId": "10#28",
+          "score": 4.5
+        },
+        {
+          "docId": "11#101",
+          "score": 4.5
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "118",
+      "query": "華族とはなんですか？",
+      "expectedDocIds": [
+        "14813#0"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "14813#0",
+          "score": 3.75
+        },
+        {
+          "docId": "10#17",
+          "score": 2.75
+        },
+        {
+          "docId": "11#23",
+          "score": 2.75
+        },
+        {
+          "docId": "11#62",
+          "score": 2.75
+        },
+        {
+          "docId": "10#28",
+          "score": 2.25
+        },
+        {
+          "docId": "11#184",
+          "score": 2.25
+        },
+        {
+          "docId": "11#73",
+          "score": 1.5
+        },
+        {
+          "docId": "78756#10",
+          "score": 1.5
+        },
+        {
+          "docId": "10#10",
+          "score": 1
+        },
+        {
+          "docId": "10#14",
+          "score": 1
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "122",
+      "query": "ＰＬ学園の野球部はなぜ廃止された？",
+      "expectedDocIds": [
+        "77046#13"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "77046#13",
+          "score": 24.25
+        },
+        {
+          "docId": "11152#9",
+          "score": 4
+        },
+        {
+          "docId": "1883682#0",
+          "score": 4
+        },
+        {
+          "docId": "41139#3",
+          "score": 2.75
+        },
+        {
+          "docId": "780830#6",
+          "score": 2.75
+        },
+        {
+          "docId": "78756#10",
+          "score": 2.75
+        },
+        {
+          "docId": "10#13",
+          "score": 2.25
+        },
+        {
+          "docId": "10#20",
+          "score": 2.25
+        },
+        {
+          "docId": "10#36",
+          "score": 2.25
+        },
+        {
+          "docId": "10#41",
+          "score": 2.25
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "132",
+      "query": "半導体メモリーが開発されたのはいつ",
+      "expectedDocIds": [
+        "3564220#1"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "3564220#1",
+          "score": 13.5
+        },
+        {
+          "docId": "320509#13",
+          "score": 8
+        },
+        {
+          "docId": "54592#4",
+          "score": 6.25
+        },
+        {
+          "docId": "22530#1",
+          "score": 5.75
+        },
+        {
+          "docId": "1862185#0",
+          "score": 4.75
+        },
+        {
+          "docId": "78756#10",
+          "score": 3.75
+        },
+        {
+          "docId": "10#15",
+          "score": 3.25
+        },
+        {
+          "docId": "304598#0",
+          "score": 3
+        },
+        {
+          "docId": "10#36",
+          "score": 2.75
+        },
+        {
+          "docId": "11152#9",
+          "score": 2.75
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "137",
+      "query": "日本でオーラという概念が広まったのはいつですか？",
+      "expectedDocIds": [
+        "780830#6"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "780830#6",
+          "score": 12
+        },
+        {
+          "docId": "11#31",
+          "score": 8.75
+        },
+        {
+          "docId": "11#96",
+          "score": 6.5
+        },
+        {
+          "docId": "11#143",
+          "score": 5.5
+        },
+        {
+          "docId": "1249364#3",
+          "score": 5
+        },
+        {
+          "docId": "96129#17",
+          "score": 5
+        },
+        {
+          "docId": "11#146",
+          "score": 4.75
+        },
+        {
+          "docId": "11#147",
+          "score": 4.75
+        },
+        {
+          "docId": "11#156",
+          "score": 4.75
+        },
+        {
+          "docId": "11#162",
+          "score": 4.75
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "148",
+      "query": "ピュロス戦争が続いた期間は？",
+      "expectedDocIds": [
+        "3643901#0"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "3643901#0",
+          "score": 27
+        },
+        {
+          "docId": "3041653#3",
+          "score": 3
+        },
+        {
+          "docId": "57206#1",
+          "score": 2.25
+        },
+        {
+          "docId": "2206433#0",
+          "score": 1
+        },
+        {
+          "docId": "10#11",
+          "score": 0.5
+        },
+        {
+          "docId": "10#13",
+          "score": 0.5
+        },
+        {
+          "docId": "10#14",
+          "score": 0.5
+        },
+        {
+          "docId": "10#15",
+          "score": 0.5
+        },
+        {
+          "docId": "10#16",
+          "score": 0.5
+        },
+        {
+          "docId": "10#24",
+          "score": 0.5
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "151",
+      "query": "新潟少女監禁事件の犯人に下された刑罰は？",
+      "expectedDocIds": [
+        "2206433#0"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "2206433#0",
+          "score": 42.25
+        },
+        {
+          "docId": "11#154",
+          "score": 2.75
+        },
+        {
+          "docId": "10#13",
+          "score": 2.25
+        },
+        {
+          "docId": "10#20",
+          "score": 2.25
+        },
+        {
+          "docId": "10#36",
+          "score": 2.25
+        },
+        {
+          "docId": "10#41",
+          "score": 2.25
+        },
+        {
+          "docId": "10#8",
+          "score": 2.25
+        },
+        {
+          "docId": "102838#15",
+          "score": 2.25
+        },
+        {
+          "docId": "11#104",
+          "score": 2.25
+        },
+        {
+          "docId": "11#105",
+          "score": 2.25
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "162",
+      "query": "田村 駒治郎の父親の職業は何",
+      "expectedDocIds": [
+        "2022546#3"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "2022546#3",
+          "score": 21.25
+        },
+        {
+          "docId": "11#162",
+          "score": 2.75
+        },
+        {
+          "docId": "11#107",
+          "score": 0.5
+        },
+        {
+          "docId": "11#138",
+          "score": 0.5
+        },
+        {
+          "docId": "11#164",
+          "score": 0.5
+        },
+        {
+          "docId": "11#188",
+          "score": 0.5
+        },
+        {
+          "docId": "11#33",
+          "score": 0.5
+        },
+        {
+          "docId": "11#69",
+          "score": 0.5
+        },
+        {
+          "docId": "3041653#3",
+          "score": 0.5
+        },
+        {
+          "docId": "3564220#1",
+          "score": 0.5
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "174",
+      "query": "中條 健一の最終学歴は何？",
+      "expectedDocIds": [
+        "202044#3"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "202044#3",
+          "score": 10.5
+        },
+        {
+          "docId": "10#10",
+          "score": 0.5
+        },
+        {
+          "docId": "10#11",
+          "score": 0.5
+        },
+        {
+          "docId": "10#17",
+          "score": 0.5
+        },
+        {
+          "docId": "10#24",
+          "score": 0.5
+        },
+        {
+          "docId": "10#27",
+          "score": 0.5
+        },
+        {
+          "docId": "10#36",
+          "score": 0.5
+        },
+        {
+          "docId": "11#1",
+          "score": 0.5
+        },
+        {
+          "docId": "11#107",
+          "score": 0.5
+        },
+        {
+          "docId": "11#116",
+          "score": 0.5
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "178",
+      "query": "ギリシア神話でゼウスに子どもはいる？",
+      "expectedDocIds": [
+        "6235#5"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "6235#5",
+          "score": 6
+        },
+        {
+          "docId": "3643901#0",
+          "score": 4
+        },
+        {
+          "docId": "10#13",
+          "score": 3.25
+        },
+        {
+          "docId": "1249364#3",
+          "score": 3.25
+        },
+        {
+          "docId": "10#16",
+          "score": 2.75
+        },
+        {
+          "docId": "11#13",
+          "score": 2.75
+        },
+        {
+          "docId": "54592#4",
+          "score": 2.75
+        },
+        {
+          "docId": "10#19",
+          "score": 2.25
+        },
+        {
+          "docId": "10#24",
+          "score": 1.5
+        },
+        {
+          "docId": "10#33",
+          "score": 1.5
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "181",
+      "query": "エスター・ホバート・モリスが生まれたのはいつ",
+      "expectedDocIds": [
+        "1862185#0"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "1862185#0",
+          "score": 35
+        },
+        {
+          "docId": "168383#12",
+          "score": 9.25
+        },
+        {
+          "docId": "424923#4",
+          "score": 8.75
+        },
+        {
+          "docId": "10#15",
+          "score": 6.75
+        },
+        {
+          "docId": "1249364#3",
+          "score": 6.25
+        },
+        {
+          "docId": "37740#4",
+          "score": 6
+        },
+        {
+          "docId": "2681119#1",
+          "score": 5.5
+        },
+        {
+          "docId": "11#162",
+          "score": 4.5
+        },
+        {
+          "docId": "11#167",
+          "score": 4.5
+        },
+        {
+          "docId": "3041653#3",
+          "score": 4.25
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "186",
+      "query": "アインシュタインはノーベル賞を受賞した？",
+      "expectedDocIds": [
+        "4008#2"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "4008#2",
+          "score": 36.5
+        },
+        {
+          "docId": "10#36",
+          "score": 3.75
+        },
+        {
+          "docId": "67334#5",
+          "score": 3.5
+        },
+        {
+          "docId": "2681119#1",
+          "score": 3
+        },
+        {
+          "docId": "11#18",
+          "score": 2
+        },
+        {
+          "docId": "2548803#3",
+          "score": 2
+        },
+        {
+          "docId": "57206#1",
+          "score": 2
+        },
+        {
+          "docId": "10#27",
+          "score": 1.5
+        },
+        {
+          "docId": "1249364#3",
+          "score": 1.5
+        },
+        {
+          "docId": "3041653#3",
+          "score": 1.5
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "187",
+      "query": "サバトの起源はいつ",
+      "expectedDocIds": [
+        "1249364#3"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "1249364#3",
+          "score": 10
+        },
+        {
+          "docId": "10#15",
+          "score": 2.75
+        },
+        {
+          "docId": "10#45",
+          "score": 2.75
+        },
+        {
+          "docId": "424923#4",
+          "score": 2.25
+        },
+        {
+          "docId": "10#27",
+          "score": 0.5
+        },
+        {
+          "docId": "10#30",
+          "score": 0.5
+        },
+        {
+          "docId": "11#156",
+          "score": 0.5
+        },
+        {
+          "docId": "11#161",
+          "score": 0.5
+        },
+        {
+          "docId": "11#162",
+          "score": 0.5
+        },
+        {
+          "docId": "11#171",
+          "score": 0.5
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "190",
+      "query": "はじめて発見された 周連星惑星は何",
+      "expectedDocIds": [
+        "186104#27"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "186104#27",
+          "score": 13
+        },
+        {
+          "docId": "2206433#0",
+          "score": 5.75
+        },
+        {
+          "docId": "10#7",
+          "score": 2.75
+        },
+        {
+          "docId": "1862185#0",
+          "score": 2.75
+        },
+        {
+          "docId": "54592#4",
+          "score": 2.75
+        },
+        {
+          "docId": "77046#13",
+          "score": 2.75
+        },
+        {
+          "docId": "78756#10",
+          "score": 2.75
+        },
+        {
+          "docId": "10#13",
+          "score": 2.25
+        },
+        {
+          "docId": "10#20",
+          "score": 2.25
+        },
+        {
+          "docId": "10#36",
+          "score": 2.25
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "191",
+      "query": "アル・カポネの父親の職業は何？",
+      "expectedDocIds": [
+        "48637#4"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "48637#4",
+          "score": 7.5
+        },
+        {
+          "docId": "11#162",
+          "score": 2.75
+        },
+        {
+          "docId": "4008#2",
+          "score": 2
+        },
+        {
+          "docId": "10#16",
+          "score": 0.5
+        },
+        {
+          "docId": "10#30",
+          "score": 0.5
+        },
+        {
+          "docId": "11#107",
+          "score": 0.5
+        },
+        {
+          "docId": "11#138",
+          "score": 0.5
+        },
+        {
+          "docId": "11#164",
+          "score": 0.5
+        },
+        {
+          "docId": "11#188",
+          "score": 0.5
+        },
+        {
+          "docId": "11#22",
+          "score": 0.5
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "196",
+      "query": "フォード・モデルTの車体の主な素材は何",
+      "expectedDocIds": [
+        "320509#13"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "320509#13",
+          "score": 29.75
+        },
+        {
+          "docId": "11#146",
+          "score": 5.25
+        },
+        {
+          "docId": "10#41",
+          "score": 2.25
+        },
+        {
+          "docId": "11#33",
+          "score": 1
+        },
+        {
+          "docId": "11#69",
+          "score": 1
+        },
+        {
+          "docId": "10#14",
+          "score": 0.5
+        },
+        {
+          "docId": "10#15",
+          "score": 0.5
+        },
+        {
+          "docId": "10#3",
+          "score": 0.5
+        },
+        {
+          "docId": "10#36",
+          "score": 0.5
+        },
+        {
+          "docId": "10#4",
+          "score": 0.5
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "209",
+      "query": "ＮＨＫは有料テレビ局？",
+      "expectedDocIds": [
+        "2051268#0"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "2051268#0",
+          "score": 8.25
+        },
+        {
+          "docId": "10#14",
+          "score": 2.75
+        },
+        {
+          "docId": "11#17",
+          "score": 2.25
+        },
+        {
+          "docId": "3864531#4",
+          "score": 2.25
+        },
+        {
+          "docId": "67334#5",
+          "score": 2.25
+        },
+        {
+          "docId": "11#62",
+          "score": 0.5
+        },
+        {
+          "docId": "48637#4",
+          "score": 0.5
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "213",
+      "query": "日本帝国軍の階級で最高階級は何だった？",
+      "expectedDocIds": [
+        "41139#3"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "41139#3",
+          "score": 16.5
+        },
+        {
+          "docId": "11#53",
+          "score": 3.75
+        },
+        {
+          "docId": "96129#17",
+          "score": 3.25
+        },
+        {
+          "docId": "11#12",
+          "score": 3
+        },
+        {
+          "docId": "3036390#0",
+          "score": 2.75
+        },
+        {
+          "docId": "11#122",
+          "score": 2.5
+        },
+        {
+          "docId": "11#144",
+          "score": 2.5
+        },
+        {
+          "docId": "11#147",
+          "score": 2.5
+        },
+        {
+          "docId": "11#150",
+          "score": 2.5
+        },
+        {
+          "docId": "11#160",
+          "score": 2.5
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "221",
+      "query": "被災者生活再建支援法が制定されたのはいつ",
+      "expectedDocIds": [
+        "426443#0"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "426443#0",
+          "score": 52
+        },
+        {
+          "docId": "10#21",
+          "score": 6.25
+        },
+        {
+          "docId": "22530#1",
+          "score": 5.75
+        },
+        {
+          "docId": "54592#4",
+          "score": 4.5
+        },
+        {
+          "docId": "10#15",
+          "score": 3.25
+        },
+        {
+          "docId": "10#20",
+          "score": 3.25
+        },
+        {
+          "docId": "10#36",
+          "score": 3.25
+        },
+        {
+          "docId": "77046#13",
+          "score": 3.25
+        },
+        {
+          "docId": "1249364#3",
+          "score": 2.75
+        },
+        {
+          "docId": "41139#3",
+          "score": 2.75
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "229",
+      "query": "マンチェスター・ビクトリア大学の創始者は誰",
+      "expectedDocIds": [
+        "424923#4"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "424923#4",
+          "score": 48.25
+        },
+        {
+          "docId": "1862185#0",
+          "score": 8.25
+        },
+        {
+          "docId": "67334#5",
+          "score": 2.75
+        },
+        {
+          "docId": "3036390#0",
+          "score": 2.5
+        },
+        {
+          "docId": "10#30",
+          "score": 2.25
+        },
+        {
+          "docId": "2584807#4",
+          "score": 2.25
+        },
+        {
+          "docId": "2548803#3",
+          "score": 2
+        },
+        {
+          "docId": "2681119#1",
+          "score": 2
+        },
+        {
+          "docId": "309202#1",
+          "score": 2
+        },
+        {
+          "docId": "10#36",
+          "score": 1.5
+        }
+      ],
+      "failureCategory": null
+    },
+    {
+      "id": "231",
+      "query": "行政教区とは何ですか？",
+      "expectedDocIds": [
+        "3357923#1"
+      ],
+      "firstMatchRank": 1,
+      "topDocs": [
+        {
+          "docId": "3357923#1",
+          "score": 12.75
+        },
+        {
+          "docId": "11#138",
+          "score": 1.5
+        },
+        {
+          "docId": "11#116",
+          "score": 1
+        },
+        {
+          "docId": "11#156",
+          "score": 1
+        },
+        {
+          "docId": "11#192",
+          "score": 1
+        },
+        {
+          "docId": "11#73",
+          "score": 1
+        },
+        {
+          "docId": "10#10",
+          "score": 0.5
+        },
+        {
+          "docId": "10#13",
+          "score": 0.5
+        },
+        {
+          "docId": "10#24",
+          "score": 0.5
+        },
+        {
+          "docId": "10#25",
+          "score": 0.5
+        }
+      ],
+      "failureCategory": null
+    }
+  ]
+}

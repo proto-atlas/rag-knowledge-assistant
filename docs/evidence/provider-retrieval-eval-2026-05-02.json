@@ -1,0 +1,513 @@
+{
+  "generatedAt": "2026-05-02T07:43:41.046Z",
+  "checkType": "provider-retrieval-eval",
+  "baseUrl": "http://127.0.0.1:8796",
+  "scoreGateLabel": "code default MIN_PROVIDER_VECTOR_SCORE=0.55",
+  "result": {
+    "total": 25,
+    "answerableTotal": 20,
+    "noAnswerTotal": 5,
+    "hitAt1": 1,
+    "hitAt3": 1,
+    "hitAt5": 1,
+    "mrr": 1,
+    "noAnswerAccuracy": 1,
+    "failedCases": []
+  },
+  "scoreSeparation": {
+    "answerableMinTopScore": 0.5792542,
+    "noAnswerMaxTopScore": 0.51189995,
+    "margin": 0.06735425000000006,
+    "marginAboveMaxNoAnswerAtDefault": 0.03810005000000005,
+    "marginBelowMinAnswerableAtDefault": 0.029254200000000008
+  },
+  "scoreDistribution": {
+    "answerable": {
+      "n": 20,
+      "min": 0.5792542,
+      "p25": 0.6509442249999999,
+      "p50": 0.691210895,
+      "p75": 0.7288335475,
+      "max": 0.7702456
+    },
+    "noAnswer": {
+      "n": 5,
+      "sortedValues": [
+        0.36220714,
+        0.37944838,
+        0.4886515,
+        0.50431925,
+        0.51189995
+      ]
+    }
+  },
+  "thresholdSensitivity": [
+    {
+      "threshold": 0.5,
+      "answerableRetained": 20,
+      "noAnswerRetained": 3
+    },
+    {
+      "threshold": 0.525,
+      "answerableRetained": 20,
+      "noAnswerRetained": 5
+    },
+    {
+      "threshold": 0.55,
+      "answerableRetained": 20,
+      "noAnswerRetained": 5
+    },
+    {
+      "threshold": 0.575,
+      "answerableRetained": 20,
+      "noAnswerRetained": 5
+    },
+    {
+      "threshold": 0.6,
+      "answerableRetained": 19,
+      "noAnswerRetained": 5
+    }
+  ],
+  "rows": [
+    {
+      "id": "ret-001",
+      "question": "リモート勤務はいつまでに申請しますか？",
+      "shouldAnswer": true,
+      "expectedChunkIds": [
+        "remote-work-policy__s1__c1"
+      ],
+      "actualChunkIds": [
+        "remote-work-policy__s1__c1",
+        "remote-work-policy__s3__c1",
+        "expense-policy__s2__c1",
+        "incident-response__s3__c1",
+        "product-faq__s3__c1"
+      ],
+      "noAnswerRecommended": false,
+      "firstMatchRank": 1,
+      "topScore": 0.7341679
+    },
+    {
+      "id": "ret-002",
+      "question": "公共Wi-Fiで作業するときは何が必要ですか？",
+      "shouldAnswer": true,
+      "expectedChunkIds": [
+        "remote-work-policy__s2__c1"
+      ],
+      "actualChunkIds": [
+        "remote-work-policy__s2__c1",
+        "security-handbook__s3__c1",
+        "security-handbook__s2__c1",
+        "remote-work-policy__s1__c1",
+        "release-process__s1__c1"
+      ],
+      "noAnswerRecommended": false,
+      "firstMatchRank": 1,
+      "topScore": 0.6393505
+    },
+    {
+      "id": "ret-003",
+      "question": "三十分以上離席するときの連絡ルールは？",
+      "shouldAnswer": true,
+      "expectedChunkIds": [
+        "remote-work-policy__s3__c1"
+      ],
+      "actualChunkIds": [
+        "remote-work-policy__s3__c1",
+        "remote-work-policy__s1__c1",
+        "incident-response__s1__c1",
+        "security-handbook__s2__c1",
+        "incident-response__s3__c1"
+      ],
+      "noAnswerRecommended": false,
+      "firstMatchRank": 1,
+      "topScore": 0.6736788
+    },
+    {
+      "id": "ret-004",
+      "question": "五万円以上の経費は誰の承認が必要ですか？",
+      "shouldAnswer": true,
+      "expectedChunkIds": [
+        "expense-policy__s2__c1"
+      ],
+      "actualChunkIds": [
+        "expense-policy__s2__c1",
+        "expense-policy__s1__c1",
+        "expense-policy__s3__c1",
+        "onboarding-guide__s1__c1",
+        "security-handbook__s1__c1"
+      ],
+      "noAnswerRecommended": false,
+      "firstMatchRank": 1,
+      "topScore": 0.6548088
+    },
+    {
+      "id": "ret-005",
+      "question": "精算できない支出には何がありますか？",
+      "shouldAnswer": true,
+      "expectedChunkIds": [
+        "expense-policy__s3__c1"
+      ],
+      "actualChunkIds": [
+        "expense-policy__s3__c1",
+        "expense-policy__s1__c1",
+        "expense-policy__s2__c1",
+        "support-escalation__s1__c1",
+        "release-process__s3__c1"
+      ],
+      "noAnswerRecommended": false,
+      "firstMatchRank": 1,
+      "topScore": 0.6135415
+    },
+    {
+      "id": "ret-006",
+      "question": "社内アカウントに必要な認証方式は？",
+      "shouldAnswer": true,
+      "expectedChunkIds": [
+        "security-handbook__s1__c1"
+      ],
+      "actualChunkIds": [
+        "security-handbook__s1__c1",
+        "remote-work-policy__s2__c1",
+        "onboarding-guide__s1__c1",
+        "security-handbook__s2__c1",
+        "incident-response__s1__c1"
+      ],
+      "noAnswerRecommended": false,
+      "firstMatchRank": 1,
+      "topScore": 0.68814105
+    },
+    {
+      "id": "ret-007",
+      "question": "端末を紛失した場合はいつまでに連絡しますか？",
+      "shouldAnswer": true,
+      "expectedChunkIds": [
+        "security-handbook__s2__c1"
+      ],
+      "actualChunkIds": [
+        "security-handbook__s2__c1",
+        "incident-response__s1__c1",
+        "product-faq__s3__c1",
+        "support-escalation__s3__c1",
+        "incident-response__s3__c1"
+      ],
+      "noAnswerRecommended": false,
+      "firstMatchRank": 1,
+      "topScore": 0.66884285
+    },
+    {
+      "id": "ret-008",
+      "question": "外部共有の前に確認することは？",
+      "shouldAnswer": true,
+      "expectedChunkIds": [
+        "security-handbook__s3__c1"
+      ],
+      "actualChunkIds": [
+        "security-handbook__s3__c1",
+        "remote-work-policy__s2__c1",
+        "release-process__s1__c1",
+        "release-process__s2__c1",
+        "incident-response__s2__c1"
+      ],
+      "noAnswerRecommended": false,
+      "firstMatchRank": 1,
+      "topScore": 0.69428074
+    },
+    {
+      "id": "ret-009",
+      "question": "不審なログイン通知を見つけたら何分以内に報告しますか？",
+      "shouldAnswer": true,
+      "expectedChunkIds": [
+        "incident-response__s1__c1"
+      ],
+      "actualChunkIds": [
+        "incident-response__s1__c1",
+        "product-faq__s3__c1",
+        "onboarding-guide__s1__c1",
+        "incident-response__s3__c1",
+        "security-handbook__s2__c1"
+      ],
+      "noAnswerRecommended": false,
+      "firstMatchRank": 1,
+      "topScore": 0.76199514
+    },
+    {
+      "id": "ret-010",
+      "question": "secret漏えいが疑われる場合の封じ込めは？",
+      "shouldAnswer": true,
+      "expectedChunkIds": [
+        "incident-response__s2__c1"
+      ],
+      "actualChunkIds": [
+        "incident-response__s2__c1",
+        "security-handbook__s3__c1",
+        "security-handbook__s2__c1",
+        "incident-response__s1__c1",
+        "remote-work-policy__s2__c1"
+      ],
+      "noAnswerRecommended": false,
+      "firstMatchRank": 1,
+      "topScore": 0.63123554
+    },
+    {
+      "id": "ret-011",
+      "question": "ポストモーテムには何を書きますか？",
+      "shouldAnswer": true,
+      "expectedChunkIds": [
+        "incident-response__s3__c1"
+      ],
+      "actualChunkIds": [
+        "incident-response__s3__c1",
+        "support-escalation__s3__c1",
+        "remote-work-policy__s1__c1",
+        "onboarding-guide__s2__c1",
+        "onboarding-guide__s1__c1"
+      ],
+      "noAnswerRecommended": false,
+      "firstMatchRank": 1,
+      "topScore": 0.66486126
+    },
+    {
+      "id": "ret-012",
+      "question": "入社初日に設定するものは？",
+      "shouldAnswer": true,
+      "expectedChunkIds": [
+        "onboarding-guide__s1__c1"
+      ],
+      "actualChunkIds": [
+        "onboarding-guide__s1__c1",
+        "security-handbook__s1__c1",
+        "onboarding-guide__s2__c1",
+        "expense-policy__s2__c1",
+        "remote-work-policy__s1__c1"
+      ],
+      "noAnswerRecommended": false,
+      "firstMatchRank": 1,
+      "topScore": 0.7261104
+    },
+    {
+      "id": "ret-013",
+      "question": "一週間目に取り組むタスクは？",
+      "shouldAnswer": true,
+      "expectedChunkIds": [
+        "onboarding-guide__s2__c1"
+      ],
+      "actualChunkIds": [
+        "onboarding-guide__s2__c1",
+        "onboarding-guide__s1__c1",
+        "onboarding-guide__s3__c1",
+        "expense-policy__s2__c1",
+        "incident-response__s3__c1"
+      ],
+      "noAnswerRecommended": false,
+      "firstMatchRank": 1,
+      "topScore": 0.72705543
+    },
+    {
+      "id": "ret-014",
+      "question": "Businessプランには何が含まれますか？",
+      "shouldAnswer": true,
+      "expectedChunkIds": [
+        "product-faq__s1__c1"
+      ],
+      "actualChunkIds": [
+        "product-faq__s1__c1",
+        "product-faq__s2__c1",
+        "expense-policy__s1__c1",
+        "expense-policy__s2__c1",
+        "onboarding-guide__s1__c1"
+      ],
+      "noAnswerRecommended": false,
+      "firstMatchRank": 1,
+      "topScore": 0.5792542
+    },
+    {
+      "id": "ret-015",
+      "question": "削除したプロジェクトの復元期間は？",
+      "shouldAnswer": true,
+      "expectedChunkIds": [
+        "product-faq__s2__c1"
+      ],
+      "actualChunkIds": [
+        "product-faq__s2__c1",
+        "incident-response__s3__c1",
+        "onboarding-guide__s2__c1",
+        "onboarding-guide__s3__c1",
+        "expense-policy__s2__c1"
+      ],
+      "noAnswerRecommended": false,
+      "firstMatchRank": 1,
+      "topScore": 0.7702456
+    },
+    {
+      "id": "ret-016",
+      "question": "Webhookの再試行回数は？",
+      "shouldAnswer": true,
+      "expectedChunkIds": [
+        "product-faq__s3__c1"
+      ],
+      "actualChunkIds": [
+        "product-faq__s3__c1",
+        "onboarding-guide__s2__c1",
+        "incident-response__s2__c1",
+        "release-process__s3__c1",
+        "onboarding-guide__s3__c1"
+      ],
+      "noAnswerRecommended": false,
+      "firstMatchRank": 1,
+      "topScore": 0.6289598
+    },
+    {
+      "id": "ret-017",
+      "question": "問い合わせの優先度は何で判断しますか？",
+      "shouldAnswer": true,
+      "expectedChunkIds": [
+        "support-escalation__s1__c1"
+      ],
+      "actualChunkIds": [
+        "support-escalation__s1__c1",
+        "support-escalation__s3__c1",
+        "remote-work-policy__s3__c1",
+        "onboarding-guide__s3__c1",
+        "incident-response__s1__c1"
+      ],
+      "noAnswerRecommended": false,
+      "firstMatchRank": 1,
+      "topScore": 0.7632039
+    },
+    {
+      "id": "ret-018",
+      "question": "開発チームへ引き継ぐときに必要な情報は？",
+      "shouldAnswer": true,
+      "expectedChunkIds": [
+        "support-escalation__s2__c1"
+      ],
+      "actualChunkIds": [
+        "support-escalation__s2__c1",
+        "expense-policy__s2__c1",
+        "release-process__s2__c1",
+        "onboarding-guide__s1__c1",
+        "product-faq__s3__c1"
+      ],
+      "noAnswerRecommended": false,
+      "firstMatchRank": 1,
+      "topScore": 0.71504974
+    },
+    {
+      "id": "ret-019",
+      "question": "リリース前に実行するチェックは？",
+      "shouldAnswer": true,
+      "expectedChunkIds": [
+        "release-process__s1__c1"
+      ],
+      "actualChunkIds": [
+        "release-process__s1__c1",
+        "security-handbook__s3__c1",
+        "release-process__s2__c1",
+        "release-process__s3__c1",
+        "onboarding-guide__s3__c1"
+      ],
+      "noAnswerRecommended": false,
+      "firstMatchRank": 1,
+      "topScore": 0.74053615
+    },
+    {
+      "id": "ret-020",
+      "question": "ロールバック条件には何がありますか？",
+      "shouldAnswer": true,
+      "expectedChunkIds": [
+        "release-process__s3__c1"
+      ],
+      "actualChunkIds": [
+        "release-process__s3__c1",
+        "release-process__s2__c1",
+        "release-process__s1__c1",
+        "incident-response__s2__c1",
+        "support-escalation__s2__c1"
+      ],
+      "noAnswerRecommended": false,
+      "firstMatchRank": 1,
+      "topScore": 0.7224423
+    },
+    {
+      "id": "no-001",
+      "question": "来週の東京の天気は？",
+      "shouldAnswer": false,
+      "expectedChunkIds": [],
+      "actualChunkIds": [
+        "onboarding-guide__s3__c1",
+        "onboarding-guide__s2__c1",
+        "onboarding-guide__s1__c1",
+        "remote-work-policy__s1__c1",
+        "security-handbook__s1__c1"
+      ],
+      "noAnswerRecommended": true,
+      "firstMatchRank": null,
+      "topScore": 0.37944838
+    },
+    {
+      "id": "no-002",
+      "question": "社員の給与テーブルを教えてください",
+      "shouldAnswer": false,
+      "expectedChunkIds": [],
+      "actualChunkIds": [
+        "onboarding-guide__s1__c1",
+        "expense-policy__s2__c1",
+        "remote-work-policy__s1__c1",
+        "product-faq__s1__c1",
+        "remote-work-policy__s3__c1"
+      ],
+      "noAnswerRecommended": true,
+      "firstMatchRank": null,
+      "topScore": 0.51189995
+    },
+    {
+      "id": "no-003",
+      "question": "顧客A社の本物の契約金額はいくらですか？",
+      "shouldAnswer": false,
+      "expectedChunkIds": [],
+      "actualChunkIds": [
+        "expense-policy__s3__c1",
+        "expense-policy__s2__c1",
+        "expense-policy__s1__c1",
+        "product-faq__s1__c1",
+        "onboarding-guide__s1__c1"
+      ],
+      "noAnswerRecommended": true,
+      "firstMatchRank": null,
+      "topScore": 0.4886515
+    },
+    {
+      "id": "no-004",
+      "question": "製品の返金ポリシーを教えてください",
+      "shouldAnswer": false,
+      "expectedChunkIds": [],
+      "actualChunkIds": [
+        "expense-policy__s3__c1",
+        "incident-response__s3__c1",
+        "product-faq__s2__c1",
+        "support-escalation__s1__c1",
+        "security-handbook__s2__c1"
+      ],
+      "noAnswerRecommended": true,
+      "firstMatchRank": null,
+      "topScore": 0.50431925
+    },
+    {
+      "id": "no-005",
+      "question": "社長の自宅住所は？",
+      "shouldAnswer": false,
+      "expectedChunkIds": [],
+      "actualChunkIds": [
+        "remote-work-policy__s2__c1",
+        "security-handbook__s1__c1",
+        "security-handbook__s2__c1",
+        "remote-work-policy__s1__c1",
+        "onboarding-guide__s1__c1"
+      ],
+      "noAnswerRecommended": true,
+      "firstMatchRank": null,
+      "topScore": 0.36220714
+    }
+  ]
+}
