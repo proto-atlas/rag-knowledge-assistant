@@ -27,7 +27,7 @@
     "seed:d1-sql": "tsc -p tsconfig.evidence.json && node scripts/create-d1-seed-sql.mjs"
   },
   "dependencies": {
-    "hono": "^4.10.6",
+    "hono": "^4.12.18",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "zod": "^4.1.12"
