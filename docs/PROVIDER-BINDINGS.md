@@ -110,6 +110,19 @@ corepack pnpm wrangler secret put RAG_ANTHROPIC_API_KEY
 - model、dimensions、metric、chunking strategy、source corpusが非互換に変わる場合は、既存indexの意味を変えず、新しいindex versionを作ります。
 - 古いvectorsはmaintenance cleanupまで物理的に残る可能性がありますが、active `indexVersion` filteringでnormal searchから除外します。
 
+### Vectorize 更新手順
+
+Vectorizeを新しいembedding modelやchunking条件へ更新する場合は、次の順序で扱います。
+
+1. 新しい `indexVersion` を決める。例: `rag-bge-m3-v2`。旧versionのvectorやD1 chunk metadataを同じ名前のまま上書きしない。
+2. Workers AI model、dimension、Vectorize metric、chunking strategy、source corpus、score threshold policyを確認する。dimensionやmetricが変わる場合は、新しいVectorize indexの作成が必要になる。
+3. 全chunkを新しい条件でre-embeddingする。一部chunkだけを新modelに差し替える運用は、同じ `indexVersion` 内でembedding条件が混在するため避ける。
+4. D1の `chunks.index_version` と `index_runs` には、新しい `indexVersion`、embedding model、Vectorize index name、実行状態を記録する。D1はsource of truthなので、Vectorize upsertだけで更新完了と扱わない。
+5. Vectorize upsert時のmetadataにも同じ `indexVersion` を入れる。app側のquery filterは `RAG_ACTIVE_INDEX_VERSION` と一致するmetadataだけを通常検索対象にする。
+6. 新versionのD1 lookup、Vectorize query、provider retrieval eval、manual smokeを確認する。score thresholdやno-answer policyは旧versionの値をそのまま保証しない。
+7. 新versionが通った後で `RAG_ACTIVE_INDEX_VERSION` を切り替える。切替前は旧active versionを維持し、途中失敗時に通常検索へ混在させない。
+8. 旧vectorsは必要に応じてmaintenance cleanupする。cleanup完了までは物理的に残っていても、active `indexVersion` filterで通常検索から除外する。
+
 ## Provider Mode Policy
 
 Initial provider modeは明示的なconfigurationとaccess keyの背後に置きます。

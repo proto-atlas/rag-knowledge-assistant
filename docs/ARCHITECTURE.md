@@ -91,6 +91,8 @@ mock fixtureとprovider indexは意図的に分離しています。
 
 provider modeでは、active `indexVersion` に一致するchunkだけをsource cardへ変換します。古いchunkや別embedding条件のvectorが混ざることを避けるためです。
 
+Vectorizeを新しいembedding modelやchunking条件へ更新する場合は、旧versionを直接上書きしません。新しい `indexVersion` を作り、全chunkを同じ条件でre-embeddingしてから、D1のchunk metadata / index runとVectorize metadataを同じversionで揃えます。`RAG_ACTIVE_INDEX_VERSION` は、新versionのupsert、D1 lookup、provider retrieval eval、manual smokeが通った後に切り替える前提です。
+
 ## Claim boundary
 
 このarchitectureで示すのは、RAG UI、SSE event設計、access key付き限定live provider境界です。
