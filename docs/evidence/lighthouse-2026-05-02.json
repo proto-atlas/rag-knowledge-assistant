@@ -1,0 +1,50 @@
+{
+  "generatedAt": "2026-05-02T05:16:38.235Z",
+  "checkType": "lighthouse-lab",
+  "targetUrl": "https://rag-knowledge-assistant.atlas-lab.workers.dev",
+  "lighthouseVersion": "13.2.0",
+  "browser": "HeadlessChrome 147.0.0.0",
+  "result": "pass-with-note",
+  "note": "The Lighthouse JSON reports were produced; the local CLI returned EPERM during post-run temporary directory cleanup after report generation.",
+  "reports": {
+    "mobile": {
+      "fetchTime": "2026-05-02T05:15:43.675Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "bestPractices": 96,
+        "seo": 100
+      },
+      "metrics": {
+        "firstContentfulPaint": "1.3 s",
+        "largestContentfulPaint": "1.3 s",
+        "totalBlockingTime": "20 ms",
+        "cumulativeLayoutShift": "0",
+        "speedIndex": "2.8 s"
+      }
+    },
+    "desktop": {
+      "fetchTime": "2026-05-02T05:16:38.235Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "bestPractices": 96,
+        "seo": 100
+      },
+      "metrics": {
+        "firstContentfulPaint": "0.3 s",
+        "largestContentfulPaint": "0.3 s",
+        "totalBlockingTime": "0 ms",
+        "cumulativeLayoutShift": "0",
+        "speedIndex": "0.7 s"
+      }
+    }
+  },
+  "notClaimed": [
+    "実利用時のCore Web Vitals",
+    "確認用キー付きの動的検索または回答生成の性能",
+    "Claude、Workers AI、Vectorize、D1の実プロバイダー性能",
+    "大規模コーパスでのRAG性能",
+    "手動アクセシビリティ確認またはスクリーンリーダー網羅"
+  ]
+}

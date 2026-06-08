@@ -1,0 +1,52 @@
+{
+  "generatedAt": "2026-05-02T07:27:15.635Z",
+  "checkType": "axe-core-local-ui",
+  "result": "pass",
+  "severeViolationCount": 0,
+  "scenarios": [
+    {
+      "name": "initial public UI state",
+      "url": "http://127.0.0.1:5173/",
+      "testEngine": "axe-core 4.11.4",
+      "timestamp": "2026-05-02T07:27:17.196Z",
+      "violations": [],
+      "severeViolationCount": 0,
+      "passCount": 31,
+      "incompleteCount": 1,
+      "inapplicableCount": 56
+    },
+    {
+      "name": "モック回答と根拠カード表示",
+      "url": "http://127.0.0.1:5173/",
+      "testEngine": "axe-core 4.11.4",
+      "timestamp": "2026-05-02T07:27:17.763Z",
+      "violations": [],
+      "severeViolationCount": 0,
+      "passCount": 37,
+      "incompleteCount": 1,
+      "inapplicableCount": 50
+    },
+    {
+      "name": "確認用キーエラー表示",
+      "url": "http://127.0.0.1:5173/",
+      "testEngine": "axe-core 4.11.4",
+      "timestamp": "2026-05-02T07:27:18.482Z",
+      "violations": [],
+      "severeViolationCount": 0,
+      "passCount": 35,
+      "incompleteCount": 1,
+      "inapplicableCount": 52
+    },
+    {
+      "name": "source-validation-failed state",
+      "url": "http://127.0.0.1:5173/",
+      "testEngine": "axe-core 4.11.4",
+      "timestamp": "2026-05-02T07:27:19.197Z",
+      "violations": [],
+      "severeViolationCount": 0,
+      "passCount": 37,
+      "incompleteCount": 1,
+      "inapplicableCount": 50
+    }
+  ]
+}
