@@ -17,6 +17,9 @@ jobs:
   quality:
     name: 検証
     runs-on: ubuntu-24.04
+    container:
+      image: mcr.microsoft.com/playwright:v1.57.0-noble
+      options: --user 1001
     timeout-minutes: 20
 
     steps:
@@ -69,10 +72,6 @@ jobs:
           else
             echo "run_e2e=false" >> "$GITHUB_OUTPUT"
           fi
-
-      - name: Playwright Chromiumをインストール
-        if: steps.changes.outputs.run_e2e == 'true'
-        run: pnpm exec playwright install --with-deps chromium
 
       - name: 型チェック
         run: pnpm run typecheck
