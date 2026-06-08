@@ -1,0 +1,267 @@
+import { searchMockCorpus } from './mock-search'
+import type { SearchResponse } from './search-types'
+
+export type RetrievalEvalFixture = {
+  id: string
+  question: string
+  expectedChunkIds: string[]
+  shouldAnswer: boolean
+}
+
+export type RetrievalFailedCase = {
+  id: string
+  question: string
+  reason: 'missing_expected_chunk' | 'unexpected_answer' | 'unexpected_no_answer'
+  expectedChunkIds: string[]
+  actualChunkIds: string[]
+}
+
+export type RetrievalEvalResult = {
+  total: number
+  answerableTotal: number
+  noAnswerTotal: number
+  hitAt1: number
+  hitAt3: number
+  hitAt5: number
+  mrr: number
+  noAnswerAccuracy: number
+  failedCases: RetrievalFailedCase[]
+}
+
+export const retrievalEvalFixtures: RetrievalEvalFixture[] = [
+  {
+    id: 'ret-001',
+    question: 'リモート勤務はいつまでに申請しますか？',
+    expectedChunkIds: ['remote-work-policy__s1__c1'],
+    shouldAnswer: true
+  },
+  {
+    id: 'ret-002',
+    question: '公共Wi-Fiで作業するときは何が必要ですか？',
+    expectedChunkIds: ['remote-work-policy__s2__c1'],
+    shouldAnswer: true
+  },
+  {
+    id: 'ret-003',
+    question: '三十分以上離席するときの連絡ルールは？',
+    expectedChunkIds: ['remote-work-policy__s3__c1'],
+    shouldAnswer: true
+  },
+  {
+    id: 'ret-004',
+    question: '五万円以上の経費は誰の承認が必要ですか？',
+    expectedChunkIds: ['expense-policy__s2__c1'],
+    shouldAnswer: true
+  },
+  {
+    id: 'ret-005',
+    question: '精算できない支出には何がありますか？',
+    expectedChunkIds: ['expense-policy__s3__c1'],
+    shouldAnswer: true
+  },
+  {
+    id: 'ret-006',
+    question: '社内アカウントに必要な認証方式は？',
+    expectedChunkIds: ['security-handbook__s1__c1'],
+    shouldAnswer: true
+  },
+  {
+    id: 'ret-007',
+    question: '端末を紛失した場合はいつまでに連絡しますか？',
+    expectedChunkIds: ['security-handbook__s2__c1'],
+    shouldAnswer: true
+  },
+  {
+    id: 'ret-008',
+    question: '外部共有の前に確認することは？',
+    expectedChunkIds: ['security-handbook__s3__c1'],
+    shouldAnswer: true
+  },
+  {
+    id: 'ret-009',
+    question: '不審なログイン通知を見つけたら何分以内に報告しますか？',
+    expectedChunkIds: ['incident-response__s1__c1'],
+    shouldAnswer: true
+  },
+  {
+    id: 'ret-010',
+    question: 'secret漏えいが疑われる場合の封じ込めは？',
+    expectedChunkIds: ['incident-response__s2__c1'],
+    shouldAnswer: true
+  },
+  {
+    id: 'ret-011',
+    question: 'ポストモーテムには何を書きますか？',
+    expectedChunkIds: ['incident-response__s3__c1'],
+    shouldAnswer: true
+  },
+  {
+    id: 'ret-012',
+    question: '入社初日に設定するものは？',
+    expectedChunkIds: ['onboarding-guide__s1__c1'],
+    shouldAnswer: true
+  },
+  {
+    id: 'ret-013',
+    question: '一週間目に取り組むタスクは？',
+    expectedChunkIds: ['onboarding-guide__s2__c1'],
+    shouldAnswer: true
+  },
+  {
+    id: 'ret-014',
+    question: 'Businessプランには何が含まれますか？',
+    expectedChunkIds: ['product-faq__s1__c1'],
+    shouldAnswer: true
+  },
+  {
+    id: 'ret-015',
+    question: '削除したプロジェクトの復元期間は？',
+    expectedChunkIds: ['product-faq__s2__c1'],
+    shouldAnswer: true
+  },
+  {
+    id: 'ret-016',
+    question: 'Webhookの再試行回数は？',
+    expectedChunkIds: ['product-faq__s3__c1'],
+    shouldAnswer: true
+  },
+  {
+    id: 'ret-017',
+    question: '問い合わせの優先度は何で判断しますか？',
+    expectedChunkIds: ['support-escalation__s1__c1'],
+    shouldAnswer: true
+  },
+  {
+    id: 'ret-018',
+    question: '開発チームへ引き継ぐときに必要な情報は？',
+    expectedChunkIds: ['support-escalation__s2__c1'],
+    shouldAnswer: true
+  },
+  {
+    id: 'ret-019',
+    question: 'リリース前に実行するチェックは？',
+    expectedChunkIds: ['release-process__s1__c1'],
+    shouldAnswer: true
+  },
+  {
+    id: 'ret-020',
+    question: 'ロールバック条件には何がありますか？',
+    expectedChunkIds: ['release-process__s3__c1'],
+    shouldAnswer: true
+  },
+  {
+    id: 'no-001',
+    question: '来週の東京の天気は？',
+    expectedChunkIds: [],
+    shouldAnswer: false
+  },
+  {
+    id: 'no-002',
+    question: '社員の給与テーブルを教えてください',
+    expectedChunkIds: [],
+    shouldAnswer: false
+  },
+  {
+    id: 'no-003',
+    question: '顧客A社の本物の契約金額はいくらですか？',
+    expectedChunkIds: [],
+    shouldAnswer: false
+  },
+  {
+    id: 'no-004',
+    question: '製品の返金ポリシーを教えてください',
+    expectedChunkIds: [],
+    shouldAnswer: false
+  },
+  {
+    id: 'no-005',
+    question: '社長の自宅住所は？',
+    expectedChunkIds: [],
+    shouldAnswer: false
+  }
+]
+
+export function runRetrievalEval(fixtures: RetrievalEvalFixture[] = retrievalEvalFixtures): RetrievalEvalResult {
+  const failedCases: RetrievalFailedCase[] = []
+  const answerableFixtures = fixtures.filter((fixture) => fixture.shouldAnswer)
+  const noAnswerFixtures = fixtures.filter((fixture) => !fixture.shouldAnswer)
+  let hitAt1Count = 0
+  let hitAt3Count = 0
+  let hitAt5Count = 0
+  let reciprocalRankTotal = 0
+  let noAnswerSuccessCount = 0
+
+  for (const fixture of fixtures) {
+    const response = searchMockCorpus({ question: fixture.question, topK: 5 })
+    const actualChunkIds = response.results.map((result) => result.chunkId)
+
+    if (!fixture.shouldAnswer) {
+      if (response.noAnswerRecommended) {
+        noAnswerSuccessCount += 1
+      } else {
+        failedCases.push(createFailedCase(fixture, response, 'unexpected_answer'))
+      }
+      continue
+    }
+
+    if (response.noAnswerRecommended) {
+      failedCases.push(createFailedCase(fixture, response, 'unexpected_no_answer'))
+      continue
+    }
+
+    const firstMatchIndex = actualChunkIds.findIndex((chunkId) => fixture.expectedChunkIds.includes(chunkId))
+
+    if (firstMatchIndex === -1) {
+      failedCases.push(createFailedCase(fixture, response, 'missing_expected_chunk'))
+      continue
+    }
+
+    reciprocalRankTotal += 1 / (firstMatchIndex + 1)
+
+    if (firstMatchIndex < 1) {
+      hitAt1Count += 1
+    }
+
+    if (firstMatchIndex < 3) {
+      hitAt3Count += 1
+    }
+
+    if (firstMatchIndex < 5) {
+      hitAt5Count += 1
+    }
+  }
+
+  return {
+    total: fixtures.length,
+    answerableTotal: answerableFixtures.length,
+    noAnswerTotal: noAnswerFixtures.length,
+    hitAt1: toRatio(hitAt1Count, answerableFixtures.length),
+    hitAt3: toRatio(hitAt3Count, answerableFixtures.length),
+    hitAt5: toRatio(hitAt5Count, answerableFixtures.length),
+    mrr: toRatio(reciprocalRankTotal, answerableFixtures.length),
+    noAnswerAccuracy: toRatio(noAnswerSuccessCount, noAnswerFixtures.length),
+    failedCases
+  }
+}
+
+function createFailedCase(
+  fixture: RetrievalEvalFixture,
+  response: SearchResponse,
+  reason: RetrievalFailedCase['reason']
+): RetrievalFailedCase {
+  return {
+    id: fixture.id,
+    question: fixture.question,
+    reason,
+    expectedChunkIds: fixture.expectedChunkIds,
+    actualChunkIds: response.results.map((result) => result.chunkId)
+  }
+}
+
+function toRatio(count: number, total: number): number {
+  if (total === 0) {
+    return 0
+  }
+
+  return Number((count / total).toFixed(3))
+}
