@@ -1,0 +1,53 @@
+{
+  "name": "rag-knowledge-assistant",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "dev:worker": "wrangler dev",
+    "build": "tsc --noEmit && vite build",
+    "build:worker": "wrangler deploy --dry-run",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "evidence:ui": "playwright test --config=playwright.evidence.config.ts",
+    "evidence:axe": "playwright test --config=playwright.evidence.config.ts tests/evidence/axe-a11y.spec.ts",
+    "evidence:retrieval": "tsc -p tsconfig.evidence.json && node scripts/write-retrieval-evidence.mjs",
+    "evidence:bundle-size": "corepack pnpm run build && tsc -p tsconfig.evidence.json && node scripts/write-bundle-size-evidence.mjs",
+    "evidence:sse-latency": "tsc -p tsconfig.evidence.json && node scripts/write-sse-latency-evidence.mjs",
+    "evidence:provider-retrieval": "tsc -p tsconfig.evidence.json && node scripts/write-provider-retrieval-evidence.mjs",
+    "evidence:external-benchmark": "tsc -p tsconfig.evidence.json && node scripts/write-external-benchmark-evidence.mjs",
+    "probe:workers-ai-dimension": "tsc -p tsconfig.evidence.json && node scripts/probe-workers-ai-dimension.mjs",
+    "check:vectorize-files": "tsc -p tsconfig.evidence.json && node scripts/create-vectorize-check-files.mjs",
+    "vectorize:fixtures": "tsc -p tsconfig.evidence.json && node scripts/create-vectorize-fixture-files.mjs",
+    "check:manual-live-rag": "tsc -p tsconfig.evidence.json && node scripts/manual-live-rag-check.mjs",
+    "seed:d1-sql": "tsc -p tsconfig.evidence.json && node scripts/create-d1-seed-sql.mjs"
+  },
+  "dependencies": {
+    "hono": "^4.12.18",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260430.0",
+    "@eslint/js": "^9.39.1",
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "axe-core": "^4.11.4",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.59.1",
+    "vite": "^7.2.4",
+    "vitest": "^4.0.14",
+    "wrangler": "^4.52.0"
+  }
+}

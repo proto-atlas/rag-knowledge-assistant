@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declaration": false,
+    "isolatedModules": false,
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "noEmit": false,
+    "outDir": ".tmp/evidence-build",
+    "rootDir": "src"
+  },
+  "include": ["src/rag/**/*.ts", "src/shared/**/*.ts", "src/worker/**/*.ts"]
+}
