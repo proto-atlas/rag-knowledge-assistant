@@ -64,7 +64,7 @@
 - 手動確認チェックリストに沿って、回答できる質問1件と回答しない質問1件の実API確認を記録済みです。
 - 過去のモック応答だけのCloudflare Workers deploymentは検証記録に保存しています。
 
-この節に含めない範囲:
+現在の対象外:
 
 - 反復的なClaude API実API評価を実行済みとは主張しません。
 - Claude実APIの回答品質を一般化して主張しません。
@@ -72,7 +72,7 @@
 - Anthropic準備記録はfake provider streamsのみです。
 - 手動の実API RAG確認は回答できる質問1件と回答しない質問1件のみの特定時点の記録です。
 - 本番認証、WAF、監査ログ、ユーザー別上限、キー別上限は未実装です。
-- `wrangler.jsonc` はWorkers AI、Vectorize、D1 bindingsを含みますが、Claude provider secret値はリポジトリに含めません。
+- `wrangler.jsonc` はWorkers AI、Vectorize、D1 bindingsを含みますが、Claude provider secret値はリポジトリへ保存しません。
 
 ## 確認用キーを要求する理由
 
@@ -86,7 +86,7 @@
 
 各検証記録は特定時点の記録です。以後のcommit、deployment、プロバイダー設定でも同じ結果になるという主張ではありません。
 
-各検証記録には、時刻、確認種別、方法、範囲、結果、既知の制約を含めます。secretや端末固有の絶対パスは含めません。
+各検証記録には、時刻、確認種別、方法、範囲、結果、既知の制約を記録します。secretや端末固有の絶対パスは記録対象外です。
 
 ## RAG評価メモ
 

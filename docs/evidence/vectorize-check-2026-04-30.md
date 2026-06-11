@@ -14,7 +14,7 @@
 - D1 source-of-truth挙動を証明するものではありません。
 - Claudeによる回答生成を証明するものではありません。
 - Worker binding経由のmetadata filter挙動を証明するものではありません。
-- 生のembedding vectorは含めません。
+- 生のembedding vectorは記録対象外です。
 
 ## 対象
 

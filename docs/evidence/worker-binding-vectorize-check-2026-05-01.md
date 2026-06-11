@@ -15,7 +15,7 @@
 - Claudeによる回答生成を証明するものではありません。
 - Cloudflare deploymentを証明するものではありません。
 - 公開 `/api/search` を実プロバイダー設定へ切り替えるものではありません。
-- 生vector、確認用キー、cookie、provider secretは含めません。
+- 生vector、確認用キー、cookie、provider secretは記録対象外です。
 
 ## 対象
 

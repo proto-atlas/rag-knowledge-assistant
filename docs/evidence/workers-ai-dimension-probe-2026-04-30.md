@@ -25,7 +25,7 @@ raw embedding vector、Cloudflare token、account secret、cookie、ローカル
 
 ## probe command
 
-このコマンドは通常CIには含めません。
+このコマンドは通常CIでは実行しません。
 実API確認flagを付けない限り、実行を拒否します。
 
 ```bash
