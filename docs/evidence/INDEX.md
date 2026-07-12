@@ -27,6 +27,7 @@
 
 | 日付 | Worker version | commit | 検証記録 | 補足 |
 |---|---|---|---|---|
+| 2026-07-13 | `e126fa1a-c893-4e01-bd51-81c0d3750995` | `13d6e8b` | `wrangler deploy` | 公開URLのトップページがHTTP 200 |
 | 2026-05-01 | 検証記録内に記載 | 検証記録内に記載 | `deployment-check-2026-05-01.md` | 初回のモック応答デプロイ確認 |
 | 2026-05-02 | `5f9ba783-b039-4c07-976c-56d4f9605a91` | `de9588f` | `deployment-sanity-2026-05-02.md` | 以前の公開runtime確認 |
 | 2026-05-03 | `2fcfd549-311f-4723-a801-d0f9bbeaeaa5` | `368f6d7` | `deployment-check-2026-05-03.md` | 公開runtime確認 |
