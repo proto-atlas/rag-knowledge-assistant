@@ -11,7 +11,7 @@ describe('GET /api/public/status', () => {
       documentCount: 8,
       chunkCount: 24,
       indexVersion: 'fixture-corpus-v1',
-      lastIndexedAt: null
+      lastIndexedAt: '2026-04-30T00:00:00.000Z'
     })
     expect(JSON.stringify(body)).not.toContain('C:\\')
     expect(JSON.stringify(body)).not.toContain('secret')

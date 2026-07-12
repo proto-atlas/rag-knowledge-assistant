@@ -90,8 +90,12 @@ h2 {
   background: #e7edf5;
   border-radius: 8px;
   display: flex;
+  flex-wrap: nowrap;
   gap: 4px;
+  max-width: 100%;
+  overflow-x: auto;
   padding: 4px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .segmented__button,
@@ -105,8 +109,10 @@ h2 {
   background: transparent;
   border-radius: 6px;
   color: #3f4b5f;
+  flex: 0 0 auto;
   min-height: 36px;
   padding: 0 12px;
+  white-space: nowrap;
 }
 
 .segmented__button--active {

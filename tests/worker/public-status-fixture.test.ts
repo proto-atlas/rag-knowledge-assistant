@@ -6,7 +6,7 @@ describe('initialPublicStatus', () => {
       documentCount: 8,
       chunkCount: 24,
       indexVersion: 'fixture-corpus-v1',
-      lastIndexedAt: null
+      lastIndexedAt: '2026-04-30T00:00:00.000Z'
     })
   })
 })

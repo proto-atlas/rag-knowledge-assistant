@@ -348,6 +348,9 @@ export function App() {
 
       <section className="section" aria-labelledby="status-title">
         <h2 id="status-title">Index状態</h2>
+        <p className="section__note">
+          固定fixtureの基準情報です。実プロバイダーの最終index実績ではありません。
+        </p>
         <dl className="status-grid">
           <div>
             <dt>Documents</dt>
@@ -362,8 +365,8 @@ export function App() {
             <dd>{status.indexVersion}</dd>
           </div>
           <div>
-            <dt>Last indexed</dt>
-            <dd>{status.lastIndexedAt ?? 'not indexed'}</dd>
+            <dt>Fixture基準日時</dt>
+            <dd>{status.lastIndexedAt ?? '日時なし'}</dd>
           </div>
         </dl>
       </section>
