@@ -44,7 +44,7 @@
 - bulk eval
 - load test
 - 任意のユーザー入力
-- 非公開文書入力
+- 機密文書入力
 - repeated regeneration
 
 ## 実行コマンド
@@ -168,7 +168,7 @@ docs/evidence/manual-live-rag-check-YYYY-MM-DD.md
 - 回答しない質問:
 - 一括評価:
 - 負荷確認:
-- 非公開文書:
+- 機密文書:
 
 ## 設定
 

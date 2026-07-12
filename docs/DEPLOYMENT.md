@@ -125,7 +125,7 @@ corepack pnpm run check:manual-live-rag -- --confirm-manual-live-rag-check
 - cookies
 - 実プロバイダーの応答本文
 - スタックトレース
-- 非公開の運用詳細を含むプロンプト本文
+- 機密性のある運用詳細を含むプロンプト本文
 
 ## 再デプロイ時の手順
 

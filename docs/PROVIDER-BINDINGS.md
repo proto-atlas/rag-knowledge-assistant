@@ -22,7 +22,7 @@
 
 - デプロイ済みapplication routeの実プロバイダー検索を検証済みとは主張しません。
 - 反復的なClaude API実API評価を実行済みとは主張しません。
-- 非公開文書や任意コーパスに対する実用RAG品質は主張しません。
+- 機密文書や任意コーパスに対する実用RAG品質は主張しません。
 - この設定記録だけでprovider検索品質を証明するものではありません。
 
 ## Binding Names
@@ -98,7 +98,7 @@ corepack pnpm wrangler secret put RAG_ANTHROPIC_API_KEY
 
 `wrangler.jsonc` に含まれるD1 `database_id` は、この固定データ検証環境ではsecretとして扱っていません。ID単体ではD1をread/writeできず、実際のアクセスにはCloudflare account権限、Worker binding、または適切なAPI tokenが必要です。また、application routeのerror responseはsanitized responseとして返し、D1 `database_id`、stack trace、raw provider error、secret値をresponse bodyへ含めない方針です。
 
-一方で、本番運用では多層防御と監査上の扱いやすさを優先し、公開設定ファイルから外して非公開のデプロイ設定や環境別設定へ寄せる選択肢があります。このリポジトリでは、確認環境向けの実API確認設定として公開してもsecret漏えいとは扱わないが、本番設定の確認時には外出しを検討する、という境界で記録します。
+一方で、本番運用では多層防御と監査上の扱いやすさを優先し、公開設定ファイルから外してアクセス制限されたデプロイ設定や環境別設定へ寄せる選択肢があります。このリポジトリでは、確認環境向けの実API確認設定として公開してもsecret漏えいとは扱わないが、本番設定の確認時には外出しを検討する、という境界で記録します。
 
 ## Index Version Policy
 
