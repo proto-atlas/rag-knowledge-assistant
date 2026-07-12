@@ -58,8 +58,8 @@ RAG Knowledge Assistantは、架空文書コーパスを使ったRAG確認画面
 
 主な検証記録は [docs/evidence/INDEX.md](./docs/evidence/INDEX.md) から確認できます。
 
-- `corepack pnpm run test`: 41 files / 224 tests通過
-- `corepack pnpm run test:e2e`: 9 tests通過
+- `corepack pnpm run test`: 42 files / 228 tests通過
+- `corepack pnpm run test:e2e`: 12 tests通過
 - 固定fixtureを使った検索評価: hit@1 0.900、hit@5 1.000、MRR 0.950。用意した質問で期待する根拠が上位に出るかを測った値です。
 - Workers AI / Vectorize / D1 の接続確認
 - 実プロバイダー検索評価: 25件の固定fixtureに対する検索だけの確認。Claudeの回答品質は測っていません。
@@ -96,7 +96,7 @@ corepack pnpm run test:e2e
 - WAF、bot protection、ユーザー別または組織別のquota
 - 任意ファイルアップロード
 - PDF登録 / OCR
-- 非公開文書や任意コーパスに対する実用RAG品質の評価
+- 機密情報を含む文書や任意コーパスに対する実用RAG品質の評価
 - 文書単位のアクセス制御
 
 ## ライセンス
