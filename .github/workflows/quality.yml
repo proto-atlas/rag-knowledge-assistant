@@ -61,6 +61,12 @@ jobs:
             exit 0
           fi
 
+          # 比較元コミットを参照できない場合はE2Eを実行する
+          if ! git cat-file -e "$base^{commit}" 2>/dev/null; then
+            echo "run_e2e=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
           changed_files="$(git diff --name-only "$base" "$GITHUB_SHA")"
           if [ -z "$changed_files" ]; then
             echo "run_e2e=true" >> "$GITHUB_OUTPUT"
