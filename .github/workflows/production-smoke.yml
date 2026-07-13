@@ -1,0 +1,39 @@
+name: 公開環境確認
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "29 21 * * *"
+
+permissions: {}
+
+jobs:
+  production-smoke:
+    name: 画面とAPIの応答確認
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - path: /
+            expected: text/html
+          - path: /api/health
+            expected: application/json
+          - path: /api/public/status
+            expected: application/json
+    steps:
+      - name: 公開経路を確認
+        env:
+          TARGET_PATH: ${{ matrix.path }}
+          EXPECTED_CONTENT_TYPE: ${{ matrix.expected }}
+        run: |
+          headers_file=$(mktemp)
+          response_file=$(mktemp)
+          status=$(curl --silent --show-error --retry 3 --retry-delay 2 \
+            --dump-header "$headers_file" --output "$response_file" \
+            --write-out "%{http_code}" \
+            "https://rag-knowledge-assistant.atlas-lab.workers.dev${TARGET_PATH}")
+          test "$status" = "200"
+          test -s "$response_file"
+          grep -i "^content-type:.*${EXPECTED_CONTENT_TYPE}" "$headers_file"
